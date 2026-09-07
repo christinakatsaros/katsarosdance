@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(0, 0, 0, 0.92);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+main section {
+    padding: 90px 8%;
+}
+
+#home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+#home h2 {
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    line-height: 1;
+    margin-bottom: 24px;
+    max-width: 900px;
+}
+
+#home p {
+    font-size: 1.25rem;
+    max-width: 650px;
+    margin-bottom: 35px;
+    color: #d7d7d7;
+}
+
+#home a {
+    display: inline-block;
+    width: fit-content;
+    padding: 15px 24px;
+    background: #f5f5f5;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 999px;
+}
+
+#home a:hover {
+    opacity: 0.85;
+}
+
+#about,
+#prices {
+    background: #1a1a1a;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+section p {
+    max-width: 760px;
+    color: #d0d0d0;
+    margin-bottom: 12px;
+}
+
+#contact a {
+    color: #fff;
+    font-weight: bold;
+}
+
+footer {
+    padding: 30px 8%;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #999;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    main section {
+        padding: 70px 6%;
+    }
+
+    #home {
+        min-height: 75vh;
+    }
+
+    #home h2 {
+        font-size: 3rem;
+    }
+}
