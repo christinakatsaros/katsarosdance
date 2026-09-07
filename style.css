@@ -121,7 +121,7 @@ section p {
             rgba(0, 0, 0, 0.38) 55%,
             rgba(0, 0, 0, 0.05) 80%
         ),
-        url("christina-hero.jpg.jpeg");
+        url("christina-hero.jpg.jpeg.JPG");
 
     background-size: cover;
     background-position: center center;
@@ -327,7 +327,7 @@ footer {
                 rgba(0, 0, 0, 0.88) 82%,
                 rgba(0, 0, 0, 0.96) 100%
             ),
-            url("christina-hero.jpg.jpeg");
+            url("christina-hero.jpg.jpeg.JPG");
 
         background-position: 52% center;
     }
