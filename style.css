@@ -1,3 +1,8 @@
+/* =========================
+   KATSAROS DANCE
+   MAIN WEBSITE STYLES
+   ========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,155 +14,373 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111111;
+    color: #f7f3f1;
     line-height: 1.6;
 }
 
+
+/* =========================
+   HEADER / NAVIGATION
+   ========================= */
+
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: rgba(0, 0, 0, 0.92);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    padding: 22px 7%;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.78),
+        rgba(0, 0, 0, 0)
+    );
 }
 
 header h1 {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 5px;
     text-transform: uppercase;
+    color: white;
 }
 
 nav {
     display: flex;
-    gap: 24px;
+    gap: 30px;
 }
 
 nav a {
-    color: #f5f5f5;
+    color: white;
     text-decoration: none;
-    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 nav a:hover {
-    opacity: 0.7;
+    opacity: 0.65;
 }
+
+
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
 
 main section {
-    padding: 90px 8%;
-}
-
-#home {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: none;
-
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.82) 0%,
-            rgba(0, 0, 0, 0.55) 42%,
-            rgba(0, 0, 0, 0.10) 75%,
-            rgba(0, 0, 0, 0.05) 100%
-        ),
-        url("christina-hero.jpg.jpeg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#home h2 {
-    font-size: clamp(2.8rem, 7vw, 6rem);
-    line-height: 1;
-    margin-bottom: 24px;
-    max-width: 900px;
-}
-
-#home p {
-    font-size: 1.25rem;
-    max-width: 650px;
-    margin-bottom: 35px;
-    color: #d7d7d7;
-}
-
-#home a {
-    display: inline-block;
-    width: fit-content;
-    padding: 15px 24px;
-    background: #f5f5f5;
-    color: #111;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 999px;
-}
-
-#home a:hover {
-    opacity: 0.85;
-}
-
-#about,
-#prices {
-    background: #1a1a1a;
+    padding: 100px 8%;
 }
 
 section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 24px;
 }
 
 section h3 {
-    margin-top: 30px;
+    margin-top: 32px;
     margin-bottom: 8px;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
 }
 
 section p {
     max-width: 760px;
-    color: #d0d0d0;
-    margin-bottom: 12px;
+    color: #d5d1cf;
+    margin-bottom: 14px;
+}
+
+
+/* =========================
+   HOMEPAGE HERO
+   ========================= */
+
+#home {
+    min-height: 100vh;
+    max-width: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 130px 8% 80px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.72) 30%,
+            rgba(0, 0, 0, 0.38) 55%,
+            rgba(0, 0, 0, 0.05) 80%
+        ),
+        url("christina-hero.jpg.jpeg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* Main hero heading */
+
+#home h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 400;
+    line-height: 1.02;
+
+    max-width: 720px;
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+
+/* Hero description */
+
+#home p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+
+    max-width: 540px;
+
+    margin-bottom: 32px;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* Enquiry button */
+
+#home > a {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 16px 28px;
+
+    background: #d99aaa;
+    color: #111111;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    border-radius: 50px;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#home > a:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+#about {
+    background: #171717;
+}
+
+#about h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+
+/* =========================
+   LESSONS
+   ========================= */
+
+#lessons {
+    background: #111111;
+}
+
+#lessons h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+#lessons h3 {
+    color: #e2a5b4;
+}
+
+
+/* =========================
+   PRICES
+   ========================= */
+
+#prices {
+    background: #171717;
+}
+
+#prices h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+#contact {
+    background: #111111;
+}
+
+#contact h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
 }
 
 #contact a {
-    color: #fff;
+    color: #e2a5b4;
     font-weight: bold;
+    text-decoration: none;
 }
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
-    padding: 30px 8%;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #999;
-    font-size: 0.9rem;
+    padding: 35px 8%;
+
+    background: #0a0a0a;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #888888;
+
+    font-size: 0.85rem;
 }
 
+
+/* =========================
+   MOBILE
+   ========================= */
+
 @media (max-width: 768px) {
+
     header {
+        position: absolute;
+
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+
+        gap: 14px;
+
+        padding: 20px 6%;
+    }
+
+    header h1 {
+        font-size: 1.15rem;
+        letter-spacing: 4px;
     }
 
     nav {
-        gap: 12px;
+        width: 100%;
+        gap: 14px;
         flex-wrap: wrap;
     }
 
-    main section {
-        padding: 70px 6%;
+    nav a {
+        font-size: 0.68rem;
+        letter-spacing: 1px;
     }
 
+
+    /* Mobile hero */
+
     #home {
-        min-height: 75vh;
+        min-height: 100vh;
+
+        padding: 170px 6% 65px;
+
+        justify-content: flex-end;
+
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.05) 20%,
+                rgba(0, 0, 0, 0.18) 45%,
+                rgba(0, 0, 0, 0.88) 82%,
+                rgba(0, 0, 0, 0.96) 100%
+            ),
+            url("christina-hero.jpg.jpeg");
+
+        background-position: 52% center;
     }
 
     #home h2 {
-        font-size: 3rem;
+        font-size: clamp(2.6rem, 12vw, 4rem);
+        max-width: 100%;
+        margin-bottom: 18px;
+    }
+
+    #home p {
+        font-size: 1rem;
+        max-width: 95%;
+        margin-bottom: 24px;
+    }
+
+    #home > a {
+        padding: 14px 21px;
+        font-size: 0.7rem;
+    }
+
+
+    /* Other sections */
+
+    main section {
+        padding: 75px 6%;
+    }
+
+    section h2 {
+        font-size: 2.1rem;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+
+@media (max-width: 420px) {
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.62rem;
+    }
+
+    #home {
+        background-position: 53% center;
+    }
+
+    #home h2 {
+        font-size: 2.7rem;
     }
 }
