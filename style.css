@@ -1691,3 +1691,211 @@ footer strong {
     }
 
 }
+
+/* ========================================
+   GROUP CLASSES PAGE
+   ======================================== */
+
+.group-hero {
+    padding: 125px 8% 100px;
+    background: #0a0a0a;
+    text-align: center;
+}
+
+.group-hero > div {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.group-hero h1 {
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 400;
+    line-height: .95;
+    margin-bottom: 28px;
+}
+
+.group-hero p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #aaa3a1;
+    font-size: 1.05rem;
+}
+
+
+.group-class-feature {
+    padding: 110px 8%;
+
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 90px;
+    align-items: center;
+}
+
+.group-class-copy h2 {
+    font-size: clamp(3.5rem, 6vw, 5.8rem);
+    font-weight: 400;
+    line-height: .95;
+    margin-bottom: 30px;
+}
+
+.group-class-copy > p:not(.eyebrow) {
+    color: #51494a;
+    margin-bottom: 18px;
+}
+
+.group-class-copy .large-copy {
+    color: #51494a;
+}
+
+.class-details {
+    margin: 38px 0;
+
+    border-top: 1px solid rgba(0,0,0,.15);
+}
+
+.class-details > div {
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+.class-details span {
+    display: block;
+
+    color: #a75f73;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    font-size: .67rem;
+    font-weight: 700;
+
+    margin-bottom: 4px;
+}
+
+.class-details strong {
+    display: block;
+
+    color: #272020;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+.group-poster {
+    max-width: 650px;
+    margin: 0 auto;
+
+    box-shadow: 0 20px 55px rgba(0,0,0,.16);
+}
+
+.group-poster img {
+    width: 100%;
+    height: auto;
+}
+
+
+.group-dances {
+    padding: 110px 8%;
+    background: #0c0c0c;
+}
+
+.dance-name-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.dance-name-grid div {
+    padding: 38px 18px;
+
+    text-align: center;
+
+    color: #dfa0b0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+
+    border-right: 1px solid rgba(255,255,255,.1);
+}
+
+.dance-name-grid div:last-child {
+    border-right: none;
+}
+
+
+/* ========================================
+   SIX-ITEM NAVIGATION
+   ======================================== */
+
+@media (min-width: 769px) and (max-width: 1250px) {
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: .64rem;
+        letter-spacing: 1.1px;
+    }
+
+}
+
+
+/* ========================================
+   GROUP CLASSES MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .group-hero {
+        padding: 90px 6% 70px;
+    }
+
+    .group-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .group-class-feature {
+        padding: 75px 6%;
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .group-class-copy h2 {
+        font-size: 3rem;
+    }
+
+    .group-poster {
+        width: 100%;
+    }
+
+    .group-dances {
+        padding: 80px 6%;
+    }
+
+    .dance-name-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dance-name-grid div {
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255,255,255,.1);
+    }
+
+    .dance-name-grid div:last-child {
+        border-bottom: none;
+    }
+
+}
