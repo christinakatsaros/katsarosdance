@@ -1921,33 +1921,49 @@ footer strong {
     .brand {
         position: relative;
         z-index: 1002;
+        flex-shrink: 0;
     }
 
     .menu-toggle {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        width: 42px;
-        height: 42px;
+        width: 46px;
+        height: 46px;
 
+        margin: 0;
         padding: 0;
-        border: 0;
+
+        border: none;
+        border-radius: 0;
+
         background: transparent;
 
+        appearance: none;
+        -webkit-appearance: none;
+
         cursor: pointer;
+
         position: relative;
-        z-index: 1002;
+        z-index: 1003;
+
+        flex-shrink: 0;
     }
 
     .menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 1px;
-        margin: 4px 0;
+        display: block !important;
 
-        background: #f7f3f1;
+        width: 27px;
+        height: 2px;
+
+        margin: 3px 0;
+
+        background-color: #ffffff !important;
+        border-radius: 2px;
+
+        opacity: 1;
 
         transition:
             transform .25s ease,
@@ -1962,6 +1978,7 @@ footer strong {
         width: 100%;
 
         display: none;
+
         flex-direction: column;
         flex-wrap: nowrap;
 
@@ -1969,10 +1986,12 @@ footer strong {
 
         padding: 18px 6% 28px;
 
-        background: rgba(9, 9, 9, .98);
+        background: #090909;
 
         border-top: 1px solid rgba(255,255,255,.07);
         border-bottom: 1px solid rgba(255,255,255,.07);
+
+        z-index: 1001;
     }
 
     .site-header nav.open {
@@ -1980,9 +1999,13 @@ footer strong {
     }
 
     .site-header nav a {
+        display: block;
+
         width: 100%;
 
-        padding: 14px 0;
+        padding: 15px 0;
+
+        color: #ffffff;
 
         font-size: .68rem;
         letter-spacing: 1.5px;
@@ -1999,7 +2022,7 @@ footer strong {
     }
 
     .menu-toggle.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
     }
 
     .menu-toggle.active span:nth-child(2) {
@@ -2007,7 +2030,7 @@ footer strong {
     }
 
     .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
 
 }
