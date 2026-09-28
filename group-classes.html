@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dance Classes in Reading & Wokingham | Katsaros Dance</title>
+    <title>Group Dance Classes in Reading & Wokingham | Katsaros Dance</title>
 
     <meta name="description"
-        content="Ballroom and Latin dance classes for adults and children with professional Latin dancer and teacher Christina Katsaros in Reading and Wokingham.">
+        content="Ballroom and Latin group dance classes for adults and children with professional Latin dancer and teacher Christina Katsaros in Reading and Wokingham.">
 
     <link rel="stylesheet" href="style.css?v=3">
 </head>
@@ -25,12 +25,11 @@
         <span></span>
     </button>
 
-
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="lessons.html">Private Lessons</a>
-        <a class="active" href="group-classes.html">Classes</a>
+        <a class="active" href="group-classes.html">Group Classes</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -44,7 +43,7 @@
 
         <div>
 
-            <p class="eyebrow">Classes</p>
+            <p class="eyebrow">Group Classes</p>
 
             <h1>
                 Dance together.
@@ -139,6 +138,7 @@
         </div>
 
     </section>
+
 
     <!-- CHILDREN'S BALLROOM & LATIN -->
 
@@ -292,5 +292,29 @@
     <span>WhatsApp</span>
 </a>
 
+
+<!-- MOBILE MENU -->
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.site-header nav');
+
+    menuToggle.addEventListener('click', function () {
+        const isOpen = navigation.classList.toggle('open');
+
+        menuToggle.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    navigation.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navigation.classList.remove('open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+</script>
+
 </body>
+
 </html>
