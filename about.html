@@ -19,6 +19,12 @@
 
     <a class="brand" href="index.html">Katsaros Dance</a>
 
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <nav>
         <a href="index.html">Home</a>
         <a class="active" href="about.html">About</a>
@@ -276,7 +282,8 @@
 
 </footer>
 
-    <a
+
+<a
     class="whatsapp-float"
     href="https://wa.me/447418609492?text=Hi%20Christina%2C%20I%27m%20interested%20in%20dance%20lessons%20and%20would%20like%20some%20more%20information."
     target="_blank"
@@ -289,5 +296,30 @@
 
     <span>WhatsApp</span>
 </a>
+
+
+<!-- MOBILE MENU -->
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.site-header nav');
+
+    menuToggle.addEventListener('click', function () {
+        const isOpen = navigation.classList.toggle('open');
+
+        menuToggle.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    navigation.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navigation.classList.remove('open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+</script>
+
 </body>
+
 </html>
